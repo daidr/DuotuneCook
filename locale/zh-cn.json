@@ -17,6 +17,9 @@
         "secondary": "辅色：",
         "contrast": "对比度："
       }
+    },
+    "preview": {
+      "protips": "拖动或点击此处选择图片"
     }
   },
   "message": {

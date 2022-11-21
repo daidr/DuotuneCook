@@ -17,6 +17,9 @@
         "secondary": "Secondary Color:",
         "contrast": "Contrast:"
       }
+    },
+    "preview": {
+      "protips": "Drag or click here to select an image"
     }
   },
   "message": {
