@@ -1,0 +1,47 @@
+html,
+body {
+  margin: 0;
+  overflow-y: hidden;
+  font-family: PingFang SC, HarmonyOS_Regular, Helvetica Neue, Microsoft YaHei, sans-serif !important;
+  @apply text-primary bg-primary/5;
+  overflow: hidden;
+}
+
+body {
+  @apply overflow-auto h-100vh;
+}
+
+#app {
+  @apply w-full;
+  @apply flex justify-center items-center;
+}
+
+* {
+  outline: none !important;
+  @apply box-border;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  @apply bg-primary;
+  color: #fff;
+}
+
+input {
+  @apply text-17px leading-0;
+  @apply border-1 border-primary border-opacity-60;
+}
+
+input::placeholder {
+  @apply text-primary/70;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
