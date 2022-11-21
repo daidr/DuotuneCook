@@ -213,6 +213,51 @@
     isDragIn.value = false;
   };
 
+  const isSafari =
+    /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+
+  const ctxGrayscale = (ctx) => {
+    const imageData = ctx.getImageData(
+      0,
+      0,
+      ctx.canvas.width,
+      ctx.canvas.height
+    );
+    const data = imageData.data;
+
+    for (let i = 0; i < data.length; i += 4) {
+      const r = data[i];
+      const g = data[i + 1];
+      const b = data[i + 2];
+
+      const v = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+
+      data[i] = data[i + 1] = data[i + 2] = v;
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+  };
+
+  const ctxContrast = (ctx, ratio) => {
+    const imageData = ctx.getImageData(
+      0,
+      0,
+      ctx.canvas.width,
+      ctx.canvas.height
+    );
+    const data = imageData.data;
+
+    const factor = (259 * (ratio + 255)) / (255 * (259 - ratio));
+
+    for (let i = 0; i < data.length; i += 4) {
+      data[i] = factor * (data[i] - 128) + 128;
+      data[i + 1] = factor * (data[i + 1] - 128) + 128;
+      data[i + 2] = factor * (data[i + 2] - 128) + 128;
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+  };
+
   const drawImageWithFilterToCanvas = () => {
     const PreviewCanvasEl = document.getElementById("PreviewCanvas");
     // 如果图片尺寸和canvas尺寸不同，则重新设置canvas尺寸
@@ -228,8 +273,15 @@
 
     // 设置 grayscale filter
     offscreenCtx.filter = `grayscale(100%) contrast(${currentColor.contrast})`;
+
     // 绘制图片到 canvas
     offscreenCtx.drawImage(originImage, 0, 0);
+
+    if (isSafari) {
+      ctxGrayscale(offscreenCtx);
+      ctxContrast(offscreenCtx, currentColor.contrast);
+    }
+
     // 清除 grayscale filter
     offscreenCtx.filter = `none`;
 
@@ -245,8 +297,6 @@
 
     // 重置 globalCompositeOperation
     offscreenCtx.globalCompositeOperation = "source-over";
-
-    // offscreenCtx.filter = "contrast(10)";
   };
 </script>
 
@@ -429,7 +479,6 @@
 
         &.disabled {
           @apply pointer-events-none filter grayscale-100;
-          @apply relative;
         }
 
         .title {
