@@ -5,5 +5,24 @@
   },
   "title": {
     "main": "DuotuneCook"
+  },
+  "page": {
+    "toolbar": {
+      "title": {
+        "presets": "Presets",
+        "config": "Config"
+      },
+      "config": {
+        "primary": "Primary Color:",
+        "secondary": "Secondary Color:",
+        "contrast": "Contrast:"
+      }
+    }
+  },
+  "message": {
+    "error": {
+      "image": "Only the image format is supported",
+      "imageerror": "Image loading failed"
+    }
   }
 }

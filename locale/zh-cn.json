@@ -5,5 +5,24 @@
   },
   "title": {
     "main": "双色调烘焙师"
+  },
+  "page": {
+    "toolbar": {
+      "title": {
+        "presets": "预设",
+        "config": "配置"
+      },
+      "config": {
+        "primary": "主色：",
+        "secondary": "辅色：",
+        "contrast": "对比度："
+      }
+    }
+  },
+  "message": {
+    "error": {
+      "image": "仅支持图片格式",
+      "imageerror": "图片加载失败"
+    }
   }
 }
