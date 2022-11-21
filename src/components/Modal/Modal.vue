@@ -308,7 +308,7 @@
               >
                 <LoadingIcon v-if="_isLoading" />
                 {{ _isLoading ? "" : okText }}
-            </div>
+              </div>
             </div>
           </div>
         </div>
