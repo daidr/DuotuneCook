@@ -238,7 +238,7 @@
     ctx.putImageData(imageData, 0, 0);
   };
 
-  const ctxContrast = (ctx, ratio) => {
+  const ctxContrast = (ctx, factor) => {
     const imageData = ctx.getImageData(
       0,
       0,
@@ -247,12 +247,12 @@
     );
     const data = imageData.data;
 
-    const factor = (259 * (ratio + 255)) / (255 * (259 - ratio));
+    const intercept = 128 * (1 - factor);
 
     for (let i = 0; i < data.length; i += 4) {
-      data[i] = factor * (data[i] - 128) + 128;
-      data[i + 1] = factor * (data[i + 1] - 128) + 128;
-      data[i + 2] = factor * (data[i + 2] - 128) + 128;
+      data[i] = data[i] * factor + intercept;
+      data[i + 1] = data[i + 1] * factor + intercept;
+      data[i + 2] = data[i + 2] * factor + intercept;
     }
 
     ctx.putImageData(imageData, 0, 0);
