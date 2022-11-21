@@ -339,7 +339,9 @@
           style="display: none"
           accept="image/*"
         />
-        <div v-if="!hasImage" class="protips">拖动或点击此处选择图片</div>
+        <div v-if="!hasImage" class="protips">
+          {{ t("page.preview.protips") }}
+        </div>
         <div
           class="drag-border"
           :class="{
