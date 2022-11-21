@@ -4,6 +4,8 @@ specifiers:
   '@iconify/vue': ^4.0.0
   '@intlify/vite-plugin-vue-i18n': ^6.0.3
   '@vitejs/plugin-vue': ^3.1.0
+  '@vueuse/core': ^9.5.0
+  i: ^0.3.7
   pinia: ^2.0.22
   sass: ^1.55.0
   vite: ^3.1.0
@@ -14,6 +16,8 @@ specifiers:
 
 dependencies:
   '@iconify/vue': 4.0.0_vue@3.2.40
+  '@vueuse/core': 9.5.0_vue@3.2.40
+  i: 0.3.7
   pinia: 2.0.22_vue@3.2.40
   sass: 1.55.0
   vite-plugin-windicss: 1.8.8_vite@3.1.4
@@ -203,6 +207,10 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /@types/web-bluetooth/0.0.16:
+    resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
+    dev: false
+
   /@vitejs/plugin-vue/3.1.2_vite@3.1.4+vue@3.2.40:
     resolution: {integrity: sha512-3zxKNlvA3oNaKDYX0NBclgxTQ1xaFdL7PzwF6zj9tGFziKwmBa3Q/6XcJQxudlT81WxDjEhHmevvIC4Orc1LhQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -289,6 +297,31 @@ packages:
 
   /@vue/shared/3.2.40:
     resolution: {integrity: sha512-0PLQ6RUtZM0vO3teRfzGi4ltLUO5aO+kLgwh4Um3THSR03rpQWLTuRCkuO5A41ITzwdWeKdPHtSARuPkoo5pCQ==}
+
+  /@vueuse/core/9.5.0_vue@3.2.40:
+    resolution: {integrity: sha512-6GsWBsJHEb3sYw15mbLrcbslAVY45pkzjJYTKYKCXv88z7srAF0VEW0q+oXKsl58tCbqooplInahXFg8Yo1m4w==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.16
+      '@vueuse/metadata': 9.5.0
+      '@vueuse/shared': 9.5.0_vue@3.2.40
+      vue-demi: 0.13.11_vue@3.2.40
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  /@vueuse/metadata/9.5.0:
+    resolution: {integrity: sha512-4M1AyPZmIv41pym+K5+4wup3bKuYebbH8w8BROY1hmT7rIwcyS4tEL+UsGz0Hiu1FCOxcoBrwtAizc0YmBJjyQ==}
+    dev: false
+
+  /@vueuse/shared/9.5.0_vue@3.2.40:
+    resolution: {integrity: sha512-HnnCWU1Vg9CVWRCcI8ohDKDRB2Sc4bTgT1XAIaoLSfVHHn+TKbrox6pd3klCSw4UDxkhDfOk8cAdcK+Z5KleCA==}
+    dependencies:
+      vue-demi: 0.13.11_vue@3.2.40
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /@windicss/config/1.8.8:
     resolution: {integrity: sha512-kNas/zMkwsDFMcJPmHoPDJlQi1MHvYwx8BSxo9JKcbCW7Gaj8Rg2CnEImX5YdT+ZcFQqQ+kUn0Vi/ScsAxhGEw==}
@@ -628,6 +661,11 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+
+  /i/0.3.7:
+    resolution: {integrity: sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==}
+    engines: {node: '>=0.4'}
+    dev: false
 
   /immutable/4.1.0:
     resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
