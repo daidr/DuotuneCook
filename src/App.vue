@@ -427,7 +427,7 @@
         @apply col-span-12 md:col-span-5 lg:col-span-4;
         @apply md:(sticky top-5);
 
-        &.disabled1 {
+        &.disabled {
           @apply pointer-events-none filter grayscale-100;
           @apply relative;
         }
