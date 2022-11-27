@@ -20,6 +20,9 @@
     },
     "preview": {
       "protips": "拖动或点击此处选择图片"
+    },
+    "footer": {
+      "sponsors": "赞助者"
     }
   },
   "message": {

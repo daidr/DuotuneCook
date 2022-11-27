@@ -20,6 +20,9 @@
     },
     "preview": {
       "protips": "Drag or click here to select an image"
+    },
+    "footer": {
+      "sponsors": "Sponsors"
     }
   },
   "message": {

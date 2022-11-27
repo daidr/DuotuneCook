@@ -13,7 +13,7 @@
         <Icon icon="uil:external-link-alt" />
         DaiDR
       </a>
-      &nbsp;with&nbsp;<Icon icon="mdi:heart" />
+      &nbsp;with&nbsp;<Icon icon="mdi:heart" />&nbsp;|&nbsp;<a href="https://sponsor.daidr.me" target="_blank" rel="noopener noreferrer">{{t("page.footer.sponsors")}}</a>
     </span>
   </div>
 </template>
